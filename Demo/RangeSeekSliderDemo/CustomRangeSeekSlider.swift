@@ -60,7 +60,6 @@ import UIKit
 // MARK: - RangeSeekSliderDelegate
 
 extension CustomRangeSeekSlider: RangeSeekSliderDelegate {
-
     func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String? {
         return priceString(value: minValue)
     }
