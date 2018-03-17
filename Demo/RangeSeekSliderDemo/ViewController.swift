@@ -63,7 +63,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: RangeSeekSliderDelegate {
 
-    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChangeMinValue: CGFloat, midValue: CGFloat, maxValue: CGFloat) {
         if slider === rangeSlider {
             print("Standard slider updated. Min Value: \(minValue) Max Value: \(maxValue)")
         } else if slider === rangeSliderCurrency {

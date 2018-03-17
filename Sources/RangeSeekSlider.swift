@@ -603,7 +603,7 @@ import UIKit
             leftHandle.borderColor = handleBorderColor.map { $0.cgColor }
             
             let middleColor: CGColor = (middleHandleImage == nil) ? (handleColor?.cgColor ?? tintCGColor) : UIColor.clear.cgColor
-            middleHandle.backgroundColor = leftColor
+            middleHandle.backgroundColor = middleColor
             middleHandle.borderColor = handleBorderColor.map { $0.cgColor }
             
             let rightColor: CGColor = (rightHandleImage == nil) ? (handleColor?.cgColor ?? tintCGColor) : UIColor.clear.cgColor
@@ -770,7 +770,7 @@ import UIKit
 
         // update the delegate
         if let delegate = delegate, handleTracking != .none {
-            delegate.rangeSeekSlider(self, didChange: selectedMinValue, maxValue: selectedMaxValue)
+            delegate.rangeSeekSlider(self, didChangeMinValue: selectedMinValue, midValue: selectedMiddleValue, maxValue: selectedMaxValue)
         }
     }
 

@@ -16,7 +16,7 @@ public protocol RangeSeekSliderDelegate: class {
     ///   - slider: RangeSeekSlider
     ///   - minValue: minimum value
     ///   - maxValue: maximum value
-    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat)
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChangeMinValue minValue: CGFloat, midValue: CGFloat, maxValue: CGFloat)
 
     /// Called when the user has started interacting with the RangeSeekSlider
     ///
@@ -50,7 +50,7 @@ public protocol RangeSeekSliderDelegate: class {
 
 public extension RangeSeekSliderDelegate {
 
-    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {}
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChangeMinValue minValue: CGFloat, midValue: CGFloat, maxValue: CGFloat) {}
     func didStartTouches(in slider: RangeSeekSlider) {}
     func didEndTouches(in slider: RangeSeekSlider) {}
     func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String? { return nil }
