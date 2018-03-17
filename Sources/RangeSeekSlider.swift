@@ -475,16 +475,16 @@ import UIKit
         leftHandle.borderWidth = handleBorderWidth
         layer.addSublayer(leftHandle)
         
+        // draw the maximum slider handle
+        rightHandle.cornerRadius = handleDiameter / 2.0
+        rightHandle.borderWidth = handleBorderWidth
+        layer.addSublayer(rightHandle)
+        
         // draw the middle slider handle
         middleHandle.cornerRadius = handleDiameter / 2.0
         middleHandle.borderWidth = handleBorderWidth
         middleHandle.isHidden = !enableMiddle
         layer.addSublayer(middleHandle)
-
-        // draw the maximum slider handle
-        rightHandle.cornerRadius = handleDiameter / 2.0
-        rightHandle.borderWidth = handleBorderWidth
-        layer.addSublayer(rightHandle)
 
         let handleFrame: CGRect = CGRect(x: 0.0, y: 0.0, width: handleDiameter, height: handleDiameter)
         leftHandle.frame = handleFrame
