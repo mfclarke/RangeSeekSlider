@@ -451,7 +451,13 @@ import UIKit
     /// When subclassing **RangeSeekSlider** and setting each item in **setupStyle()**, the design is reflected in Interface Builder as well.
     open func setupStyle() {}
 
-
+    // MARK: - public setters
+    
+    public func setSelectedMiddleValue(to value: CGFloat) {
+        selectedMiddleValue = value
+        refresh()
+    }
+    
     // MARK: - private methods
 
     private func setup() {
